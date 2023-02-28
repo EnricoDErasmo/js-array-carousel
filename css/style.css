@@ -42,7 +42,7 @@
     transform: translate(-50%, 0);   
 }
 
-#botArrow{
+#downArrow{
     position: absolute;
     bottom: 10px;
     left: 50%;
