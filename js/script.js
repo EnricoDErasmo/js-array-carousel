@@ -39,3 +39,50 @@ let index = 0;
 // Faccio in modo che all'apertura della pagina web sia visualizzata la prima immagine dell'array
 activeImgEl.src = images[index];
 
+
+// Creo una condizione che nasconda la down arrow nella situazione di partenza
+if (index == 0) {
+
+    document.getElementById("downArrow").style.display = "none";
+
+};
+
+// Creo un evento al click delle frecce
+upArrowEl.addEventListener("click", function(){
+    
+    index++
+
+    activeImgEl.src = images[index];
+
+    // ogni click della up arrow rende visibile la down arrow
+    document.getElementById("downArrow").style.display = "block";
+
+    // Creo una condizione che nasconda la up arrow al click che porta all'ultima immagine dell'array 
+    if (index == images.length - 1) {
+
+        document.getElementById("upArrow").style.display = "none";
+    
+    };
+
+});
+
+downArrowEl.addEventListener("click", function(){
+    
+    index--
+
+    activeImgEl.src = images[index];
+
+    // Creo una condizione che faccia ricomparire la up arrow al click della down arrow 
+    if (index == images.length - 2) {
+
+        document.getElementById("upArrow").style.display = "block";
+    };
+
+    // Creo una condizione che faccia ritornare nascosta la down arrow alla posizione di partenza
+    if (index == 0) {
+
+        document.getElementById("downArrow").style.display = "none";
+    
+    };
+});
+
