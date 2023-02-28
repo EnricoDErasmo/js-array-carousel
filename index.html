@@ -7,6 +7,9 @@
     
     <link rel="stylesheet" href="css/style.css">
     
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <title>Carousel</title>
 </head>
 
@@ -16,15 +19,19 @@
 
         <div id="carousel">
 
-            <div id="upArrow"></div>
-
-            <div>
-                <img src="carousel-active-img" alt="">
+            <div id="upArrow" class="arrow">
+                <i class="fa-solid fa-arrow-up"></i>
             </div>
 
-            <div id="botArrow"></div>
+            <div class="img-container">
+                <img id="carousel-active-img" src="img/01.webp" alt="">
+            </div>
+
+            <div id="botArrow" class="arrow">
+                <i class="fa-solid fa-arrow-down"></i>
+            </div>
         </div>
-        
+
     </div>
 
 
